@@ -1,38 +1,207 @@
-.App {
+body {
+  margin: 0;
+  overflow: hidden;
+  /*We applied on whole page, we will not have scroll bar when we have excess content to show*/
+}
+
+/*Home Page for Login*/
+.home {
+  text-align: center;
+  margin-top: 20%; 
+}
+
+h2{
+  color: #000;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+  display: flex;
+  /*All three dives come on one line Inline Property*/
+  height: 100vh;
+  padding: 0.5rem;
+  /*for breathing space*/
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*SideBar*/
+.sidebar {
+  background-color: rgb(244, 235, 235);
+  width: 340px;
+  border-radius: 1rem;
+  margin-right: 0.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user-profile {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.user-profile h3 {
+  font-size: 15px;
+  color: black;
+}
+
+.user-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.nav {
+  background-color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: auto;
+  padding: 0.5rem 0.75rem;
+  margin: 1rem 1rem;
+}
+
+.nav-option {
+  line-height: 2.5rem;
+  color: #000;
+  padding: 0.5rem 0.75rem;
+}
+
+.nav-option:hover {
+  background-color: lightgray;
+}
+
+.nav-option i {
+  font-size: 1.25rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  margin-left: 1rem;
+}
+
+.nav-option {
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+button {
+  padding: 1rem;
   color: white;
+  background-color: black;
+  margin-top: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+/*Main Content*/
+.main_content {
+  background-color: white;
+  flex: 1;
+  /*Assigning left over space*/
+  border-radius: 1rem;
+  overflow: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sticky-nav{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.main_content input {
+  height: 10rem;
+  width: 100%;
+  font-size: 1rem;
+  border: none;
+  background-color: rgb(244, 235, 235);
+}
+
+.addbtnbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(244, 235, 235);
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  color: black;
+  padding: 1rem;
+  /* Space between icons */
+}
+
+.addbtn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* Space between the select and button */
+}
+
+.addbtn select,
+.addbtn button {
+  font-size: 1rem;
+}
+.addbtn button{
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+ 
+}
+/*TodoList Style*/
+
+.TodoList ul {
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0; 
+  width: 100%; 
+  max-width: 600px; 
+  margin: 0 auto; 
+}
+
+.TodoList li {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 10px;
+  border-bottom: 1px solid #ccc; 
+  background-color: #f9f9f9; 
+  margin-bottom: 8px; 
+  border-radius: 4px; 
+}
+
+.TodoList li:hover {
+  background-color: #f0f0f0; 
+}
+
+.TodoList span {
+  font-size: 1rem;
+  color: #333; 
+  flex-grow: 1; 
+}
+
+.Delete, .Done {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Delete {
+  background-color: #dc3545; 
+}
+
+.Delete:hover {
+  background-color: #c82333; 
+}
+
+.Done {
+  background-color: #28a745; 
+}
+
+.Done:hover {
+  background-color: #218838; 
 }
